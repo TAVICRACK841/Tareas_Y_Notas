@@ -1,0 +1,27 @@
+---
+// 1. Importamos los estilos globales (donde configuraste Tailwind)
+// Asegúrate de que este archivo exista en src/styles/global.css
+import '../styles/global.css';
+
+// 2. Recibimos las propiedades (props) que le pasaremos desde las páginas
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Gestor de tareas colaborativo" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>{title}</title>
+	</head>
+	
+	<body class="bg-gray-100 text-gray-900 min-h-screen">
+		
+		<slot />
+        
+	</body>
+</html>
